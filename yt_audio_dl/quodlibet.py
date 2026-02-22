@@ -2,6 +2,7 @@
 
 import shutil
 import subprocess
+import time
 from pathlib import Path
 
 
@@ -32,6 +33,8 @@ def register_album(album_dir: Path, skip: bool = False) -> None:
             ["quodlibet", f"--add-location={album_dir}"],
             capture_output=True,
         )
+        # Wait for the async library scan to finish before refreshing
+        time.sleep(3)
         subprocess.run(
             ["quodlibet", "--refresh"],
             capture_output=True,
