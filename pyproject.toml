@@ -1,0 +1,12 @@
+[project]
+name = "yt-audio-dl"
+version = "0.1.0"
+description = "Download audio from YouTube playlists with metadata and Quod Libet integration."
+requires-python = ">=3.11"
+dependencies = [
+    "yt-dlp",
+    "mutagen",
+]
+
+[project.scripts]
+yt-audio-dl = "yt_audio_dl.__main__:main"

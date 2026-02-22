@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.venv/
+*.opus
+*.info.json
+*.webp
+*.jpg
+*.png
